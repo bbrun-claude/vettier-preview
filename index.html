@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VETTIER Martial — Artisan Électricien depuis 1933 | Noyal-Châtillon-sur-Seiche</title>
+<meta name="description" content="VETTIER Martial, artisan électricien depuis 1933 près de Rennes. Électricité générale, rénovation, domotique, alarme, interphone. Devis gratuit.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#1a1a2e;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{color:#2B4CB6;text-decoration:none}
+
+/* Header */
+.header{background:#fff;padding:1rem 0;border-bottom:3px solid #2B4CB6;position:sticky;top:0;z-index:100}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.logo-area{display:flex;align-items:center;gap:1rem}
+.logo-area img{width:70px;height:70px;object-fit:contain}
+.logo-text h1{font-size:1.3rem;color:#2B4CB6;font-weight:700;letter-spacing:0.5px}
+.logo-text p{font-size:0.85rem;color:#555;margin-top:2px}
+.header-contact{text-align:right}
+.header-contact a{display:inline-block;background:#2B4CB6;color:#fff;padding:0.6rem 1.5rem;border-radius:4px;font-weight:600;font-size:0.95rem}
+.header-contact a:hover{background:#1e3a8a}
+.header-contact .tel{display:block;font-size:1.1rem;color:#2B4CB6;font-weight:700;margin-bottom:0.4rem}
+
+/* Hero */
+.hero{position:relative;height:55vh;min-height:380px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(43,76,182,0.85),rgba(26,26,46,0.7))}
+.hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:2rem}
+.hero-content .badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:0.4rem 1.2rem;border-radius:50px;font-size:0.85rem;margin-bottom:1.2rem;backdrop-filter:blur(4px)}
+.hero-content h2{font-size:2.4rem;font-weight:700;margin-bottom:0.8rem;text-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.hero-content p{font-size:1.15rem;max-width:600px;margin:0 auto;opacity:0.95}
+
+/* Section */
+.section{padding:4rem 1.5rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{text-align:center;margin-bottom:3rem}
+.section-title h2{font-size:1.9rem;color:#2B4CB6;margin-bottom:0.5rem}
+.section-title p{color:#666;font-size:1rem;max-width:550px;margin:0 auto}
+.section-title .line{width:50px;height:3px;background:#2B4CB6;margin:0.8rem auto 0}
+.bg-light{background:#f0f4ff}
+
+/* Heritage */
+.heritage{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.heritage-img{border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(43,76,182,0.12)}
+.heritage-img img{width:100%;height:350px;object-fit:cover}
+.heritage-text h3{font-size:1.5rem;color:#2B4CB6;margin-bottom:1rem}
+.heritage-text p{color:#444;margin-bottom:1rem}
+.heritage-stat{display:flex;gap:2rem;margin-top:1.5rem}
+.heritage-stat div{text-align:center}
+.heritage-stat .num{font-size:2rem;font-weight:700;color:#2B4CB6}
+.heritage-stat .label{font-size:0.8rem;color:#777;text-transform:uppercase;letter-spacing:1px}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.service-card{background:#fff;padding:2rem;border-radius:8px;border:1px solid #e8eef8;transition:transform 0.2s,box-shadow 0.2s}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(43,76,182,0.1)}
+.service-icon{width:48px;height:48px;background:#f0f4ff;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem}
+.service-card h3{font-size:1.1rem;color:#1a1a2e;margin-bottom:0.5rem}
+.service-card p{font-size:0.9rem;color:#666}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}
+.gallery-item{border-radius:8px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 4px 15px rgba(0,0,0,0.08)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+.gallery-item:hover img{transform:scale(1.03)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-info{background:#2B4CB6;color:#fff;padding:2.5rem;border-radius:8px}
+.contact-info h3{font-size:1.4rem;margin-bottom:1.5rem}
+.contact-item{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.contact-item .icon{width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.contact-item p{font-size:0.95rem;line-height:1.5}
+.contact-item strong{display:block;margin-bottom:2px}
+.contact-map{border-radius:8px;overflow:hidden;min-height:350px}
+.contact-map iframe{width:100%;height:100%;border:0;min-height:350px}
+
+/* Footer */
+.footer{background:#1a1a2e;color:rgba(255,255,255,0.7);text-align:center;padding:2rem 1.5rem;font-size:0.85rem}
+.footer strong{color:#fff}
+
+/* Mobile */
+@media(max-width:768px){
+.header-inner{flex-direction:column;text-align:center}
+.header-contact{text-align:center}
+.hero{min-height:300px}
+.hero-content h2{font-size:1.6rem}
+.heritage{grid-template-columns:1fr}
+.heritage-img img{height:250px}
+.contact-grid{grid-template-columns:1fr}
+.gallery-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+<div class="header-inner">
+<div class="logo-area">
+<img src="img/entete3.png" alt="VETTIER Martial - Artisan Électricien" style="width:200px;height:auto">
+</div>
+<div class="header-contact">
+<span class="tel">02 99 50 70 04</span>
+<a href="mailto:martial.vettier@orange.fr">Demander un devis</a>
+</div>
+</div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+<img src="img/ecl5.png" alt="Installation électrique intérieure par VETTIER Martial">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<span class="badge">Artisan Électricien depuis 1933</span>
+<h2>L'expertise électrique<br>au service de votre habitat</h2>
+<p>Rénovation, domotique, dépannage et installations complètes. Plus de 90 ans de savoir-faire près de Rennes.</p>
+</div>
+</section>
+
+<!-- Heritage -->
+<section class="section">
+<div class="section-inner">
+<div class="heritage">
+<div class="heritage-img">
+<img src="img/ruederiaval.png" alt="Historique VETTIER Martial - Entreprise d'électricité">
+</div>
+<div class="heritage-text">
+<h3>Un savoir-faire transmis depuis 1933</h3>
+<p>Implantée à Noyal-Châtillon-sur-Seiche, l'entreprise VETTIER Martial accompagne les particuliers et professionnels de la région rennaise dans tous leurs projets électriques.</p>
+<p>De la rénovation complète à l'installation de systèmes domotiques, nous mettons notre expertise au service de votre confort et de votre sécurité.</p>
+<div class="heritage-stat">
+<div>
+<div class="num">93</div>
+<div class="label">Années d'expérience</div>
+</div>
+<div>
+<div class="num">35</div>
+<div class="label">Département</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services -->
+<section class="section bg-light">
+<div class="section-inner">
+<div class="section-title">
+<h2>Nos prestations</h2>
+<p>Une offre complète pour répondre à tous vos besoins en électricité</p>
+<div class="line"></div>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">⚡</div>
+<h3>Électricité générale</h3>
+<p>Installation, mise aux normes et rénovation de vos circuits électriques. Tableaux, câblage, prises et éclairage.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🏠</div>
+<h3>Rénovation</h3>
+<p>Remise aux normes de votre installation électrique. Remplacement de tableaux vétustes, mise en conformité NF C 15-100.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🔧</div>
+<h3>Domotique</h3>
+<p>Automatisation de votre habitat : volets roulants, éclairage programmable, thermostat connecté, gestion centralisée.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🔔</div>
+<h3>Alarme & Interphone</h3>
+<p>Sécurisez votre logement avec nos systèmes d'alarme, interphones vidéo et portiers. Installation et maintenance.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🌡️</div>
+<h3>Chauffage</h3>
+<p>Installation de chauffage électrique, plancher chauffant, radiateurs à inertie. Solutions économiques et performantes.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🛠️</div>
+<h3>Dépannage</h3>
+<p>Intervention rapide pour tout problème électrique : panne, court-circuit, disjonction. Diagnostic et réparation.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Gallery -->
+<section class="section">
+<div class="section-inner">
+<div class="section-title">
+<h2>Nos réalisations</h2>
+<p>Aperçu de nos interventions en électricité et domotique</p>
+<div class="line"></div>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="img/tableau4.png" alt="Installation tableau électrique - VETTIER Martial">
+</div>
+<div class="gallery-item">
+<img src="img/ecl4.png" alt="Éclairage intérieur - VETTIER Martial">
+</div>
+<div class="gallery-item">
+<img src="img/tableau5.png" alt="Câblage tableau électrique - VETTIER Martial">
+</div>
+<div class="gallery-item">
+<img src="img/ecl3.png" alt="Installation électrique rénovation - VETTIER Martial">
+</div>
+<div class="gallery-item">
+<img src="img/entreprise.png" alt="Locaux VETTIER Martial - Z.A. du Hil">
+</div>
+<div class="gallery-item">
+<img src="img/multimetre.png" alt="Diagnostic électrique - Multimètre">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section class="section bg-light" id="contact">
+<div class="section-inner">
+<div class="section-title">
+<h2>Contactez-nous</h2>
+<p>Devis gratuit et sans engagement</p>
+<div class="line"></div>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>VETTIER Martial</h3>
+<div class="contact-item">
+<div class="icon">📍</div>
+<p><strong>Adresse</strong>20 rue Louis Delourmel<br>Z.A. du Hil<br>35230 Noyal-Châtillon-sur-Seiche</p>
+</div>
+<div class="contact-item">
+<div class="icon">📞</div>
+<p><strong>Téléphone</strong>02 99 50 70 04</p>
+</div>
+<div class="contact-item">
+<div class="icon">📧</div>
+<p><strong>Email</strong><a href="mailto:martial.vettier@orange.fr" style="color:#fff;text-decoration:underline">martial.vettier@orange.fr</a></p>
+</div>
+<div class="contact-item">
+<div class="icon">🕐</div>
+<p><strong>Horaires</strong>Lundi - Samedi : 8h - 19h</p>
+</div>
+<div class="contact-item">
+<div class="icon">📋</div>
+<p><strong>SIRET</strong>421 286 717 00028</p>
+</div>
+</div>
+<div class="contact-map">
+<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6900%2C48.0700%2C-1.6600%2C48.0900&layer=mapnik&marker=48.08%2C-1.675" allowfullscreen loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<p><strong>EURL VETTIER Martial</strong> — Artisan Électricien depuis 1933</p>
+<p>20 rue Louis Delourmel, Z.A. du Hil, 35230 Noyal-Châtillon-sur-Seiche | 02 99 50 70 04</p>
+</footer>
+
+</body>
+</html>
